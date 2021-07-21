@@ -76,3 +76,25 @@ function color() {
     }
 
 }
+
+$(".saveBtn").on("click", function(){
+    console.log(this)
+var activity = $(this).siblings(".workday").val().trim()
+console.log(activity)
+var hour = $(this).siblings(".hourly").text()
+console.log(hour)
+localStorage.setItem(hour, activity)
+})
+
+$("#amhour9 .workday").val(localStorage.getItem("9 A.M."))
+$("#amhour10 .workday").val(localStorage.getItem("10 A.M."))
+$("#amhour11 .workday").val(localStorage.getItem("11 A.M."))
+$("#pmhour12 .workday").val(localStorage.getItem("12 P.M."))
+$("#pmhour1 .workday").val(localStorage.getItem("1 P.M."))
+$("#pmhour2 .workday").val(localStorage.getItem("2 P.M."))
+$("#pmhour3 .workday").val(localStorage.getItem("3 P.M."))
+$("#pmhour4 .workday").val(localStorage.getItem("4 P.M."))
+$("#pmhour5 .workday").val(localStorage.getItem("5 P.M."))
+
+
+
